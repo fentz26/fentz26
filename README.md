@@ -1,5 +1,5 @@
 <h1> ✦ ・ Ｆｅｎｔｚｚｚ ・ ✦
-
+<h3></h3>
 <p>Welcome to my page! </br> I'm Fentz, AI Fullstack developer </p>
 
 <h3>I code with</h3>
