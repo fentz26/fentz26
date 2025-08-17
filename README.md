@@ -2,6 +2,8 @@
 
 <p>Welcome to my page! </br> I'm Fentz, AI Fullstack developer </p>
 
+<h1></h1>
+
 <h3>I code with</h3>
 <p>
     <img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
