@@ -1,4 +1,4 @@
-<h1> ✦ ・ Ｆｅｎｔｚｚｚ ・ ✦
+<h1>✦ ・ Ｆｅｎｔｚｚｚ ・ ✦</h1>
 
 <p>Welcome to my page! </br> I'm Fentz, AI Fullstack developer </p>
 
