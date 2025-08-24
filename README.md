@@ -3,7 +3,10 @@
 <p>Welcome to my page! </br> I'm Fentz, AI Fullstack developer </p>
 
 <h1></h1>
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V81K6VJN)
+<p>
+    <a href=(https://ko-fi.com/V7V81K6VJN>
+        <img alt="Ko-fi" src="https://ko-fi.com/img/githubbutton_sm.svg" />
+</p>
 <h3>I code with</h3>
 <p>
     <a href="https://react.dev/">
