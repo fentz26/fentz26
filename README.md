@@ -4,7 +4,7 @@
 
 <h1></h1>
 <p>
-    <a href=(https://ko-fi.com/V7V81K6VJN>
+    <a href="https://ko-fi.com/V7V81K6VJN">
         <img alt="Ko-fi" src="https://ko-fi.com/img/githubbutton_sm.svg" />
 </p>
 <h3>I code with</h3>
