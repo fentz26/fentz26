@@ -4,7 +4,7 @@
 
 I have no idea yet
 
-![Discord](https://dcbadge.limes.pink/api/shield/463894270810783755) [![osu!](https://img.shields.io/badge/fentyz2601-Offline-FF66AA?style=for-the-badge&logo=osu&logoColor=white&labelColor=9B59B6)](https://osu.ppy.sh/users/17599205)
+![Discord](https://dcbadge.limes.pink/api/shield/463894270810783755) [![osu!](https://img.shields.io/badge/fentyz2601-Offline-808080?style=for-the-badge&logo=osu&logoColor=white&labelColor=FF66AA)](https://osu.ppy.sh/users/17599205)
 
 ![Eyes](Eyes.gif)
 
