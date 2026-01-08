@@ -1,6 +1,6 @@
 <div align="center">
 
-**"Ideal never come clearly, you only see it clear only when you work with it"**
+**"Ideas don’t come out fully formed , they only become clearer as you work on them . You just have to get started."**
 
 I have no idea yet, sometimes I mess around with LLM in H100s/B200, sometimes I just watch anime and build full-stack apps
 
