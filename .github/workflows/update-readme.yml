@@ -1,0 +1,47 @@
+name: Update README with Random GIF
+
+on:
+  schedule:
+    # Run every day at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Update README with random GIF
+        run: |
+          # Get all GIF files in media folder
+          gifs=(media/*.gif)
+          
+          # Select a random GIF
+          random_gif="${gifs[RANDOM % ${#gifs[@]}]}"
+          
+          echo "Selected GIF: $random_gif"
+          
+          # Update README.md
+          sed -i "s|!\[Random GIF\](media/.*\.gif)|![Random GIF]($random_gif)|g" README.md
+          
+          # Check if there are changes
+          if git diff --quiet README.md; then
+            echo "No changes to commit"
+            exit 0
+          fi
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "Update README with random GIF"
+          git push
