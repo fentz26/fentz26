@@ -29,13 +29,13 @@ jobs:
           # Get all GIF files in media folder
           gifs=(media/*.gif)
           
-          # Select a random GIF
-          random_gif="${gifs[RANDOM % ${#gifs[@]}]}"
+          # Select a random GIF using shuf for better randomness
+          random_gif=$(printf '%s\n' "${gifs[@]}" | shuf -n 1)
           
           echo "Selected GIF: $random_gif"
           
-          # Update README.md
-          sed -i "s|!\[Random GIF\](media/.*\.gif)|![Random GIF]($random_gif)|g" README.md
+          # Update README.md with more specific pattern
+          sed -i "s|!\[Random GIF\](media/[^)]*\.gif)|![Random GIF]($random_gif)|g" README.md
           
           # Check if there are changes
           if git diff --quiet README.md; then
