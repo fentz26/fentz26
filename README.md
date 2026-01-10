@@ -1,6 +1,6 @@
 <div align="center">
 
-## Founder/CTO of MRFY
+## Something about me
 
 **"Ideas don’t come out fully formed , they only become clearer as you work on them . You just have to get started."**
 
@@ -14,6 +14,6 @@ But anyway I have no idea (yet, probably), sometimes I mess around LLM with some
 
 ## Contact me
 
-[![EmailMe](
+[![Email](https://img.shields.io/badge/Email-contact%40fentz.dev-0A66C2?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@fentz.dev)
 
 </div>
