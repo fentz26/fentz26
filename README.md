@@ -1,6 +1,6 @@
 <div align="center">
 
-## Fentz | Founder/CTO of Polaryon x MRFY
+## Founder/CTO of MRFY
 
 **"Ideas don’t come out fully formed , they only become clearer as you work on them . You just have to get started."**
 
