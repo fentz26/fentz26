@@ -1,6 +1,6 @@
 <div align="center">
 
-**"Ideas don’t come out fully formed , they only become clearer as you work on them . You just have to get started."**
+>**"Ideas don’t come out fully formed , they only become clearer as you work on them . You just have to get started."**
 
 Mark Zuckerberg said it, but why do I have to believe it when I can see the future?
 
@@ -14,3 +14,5 @@ But anyway I have no idea (yet, probably), sometimes I mess around LLM with some
 
 ##
 </div>
+
+Founder/CEO of [MRFY](https://github.com/Polaryon) and [KIIAREN](https://github.com/kiiaren)
