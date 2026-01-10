@@ -2,7 +2,7 @@
 
 >**"Ideas don’t come out fully formed , they only become clearer as you work on them . You just have to get started."**
 
-Mark Zuckerberg said it, but why do I have to believe it when I can see the future?
+Mark Zuckerberg said it, but why do I have to believe it when I am trying to take what from future to the present.
 
 But anyway I have no idea (yet, probably), sometimes I mess around LLM with some A100 SMX5/H100 SMX5/B200, or sometimes I just watch anime and build full-stack apps
 
