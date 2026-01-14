@@ -2,8 +2,8 @@ name: Update README with Random GIF
 
 on:
   schedule:
-    # Run every day at midnight UTC
-    - cron: '0 0 * * *'
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
             exit 0
           fi
           
-          # Get all GIF files in media folder
+          # Get all GIF files from media folder
           gifs=(media/*.gif)
           
           # Select a random GIF using shuf for better randomness
@@ -34,8 +34,8 @@ jobs:
           
           echo "Selected GIF: $random_gif"
           
-          # Update README.md with more specific pattern
-          sed -i "s|!\[Random GIF\](media/[^)]*\.gif)|![Random GIF]($random_gif)|g" README.md
+          # Update README.md with the selected GIF
+          sed -i 's|!\[Random GIF\]([^)]*\.gif)|![Random GIF]('"$random_gif"')|g' README.md
           
           # Check if there are changes
           if git diff --quiet README.md; then
