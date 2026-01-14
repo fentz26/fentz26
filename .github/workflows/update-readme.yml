@@ -35,13 +35,7 @@ jobs:
           echo "Selected GIF: $random_gif"
           
           # Update README.md with the selected GIF
-          # First try to match link format [![Random GIF](...gif)](...)
-          if grep -q '\[!\[Random GIF\]' README.md; then
-            sed -i 's|\[!\[Random GIF\]([^)]*\.gif)\]([^)]*)|[![Random GIF]('"$random_gif"')](https://github.com/fentz26/fentz26/actions/workflows/update-readme.yml)|g' README.md
-          else
-            # Fallback to simple image format ![Random GIF](...gif)
-            sed -i 's|!\[Random GIF\]([^)]*\.gif)|![Random GIF]('"$random_gif"')|g' README.md
-          fi
+          sed -i 's|!\[Random GIF\]([^)]*\.gif)|![Random GIF]('"$random_gif"')|g' README.md
           
           # Check if there are changes
           if git diff --quiet README.md; then
