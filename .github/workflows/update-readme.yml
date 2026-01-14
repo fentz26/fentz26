@@ -2,8 +2,8 @@ name: Update README with Random GIF
 
 on:
   schedule:
-    # Run every day at midnight UTC
-    - cron: '0 0 * * *'
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
@@ -19,32 +19,22 @@ jobs:
       - name: Update README with random GIF
         id: update-readme
         run: |
-          # Collect GIF files from both root directory and media folder
-          gifs=()
-          
-          # Add GIFs from media folder if they exist
-          if ls media/*.gif 1> /dev/null 2>&1; then
-            gifs+=(media/*.gif)
-          fi
-          
-          # Add GIFs from root directory if they exist
-          if ls *.gif 1> /dev/null 2>&1; then
-            gifs+=(*.gif)
-          fi
-          
-          # Check if any GIF files were found
-          if [ ${#gifs[@]} -eq 0 ]; then
-            echo "No GIF files found"
+          # Check if GIF files exist in media folder
+          if ! ls media/*.gif 1> /dev/null 2>&1; then
+            echo "No GIF files found in media folder"
             echo "changed=false" >> $GITHUB_OUTPUT
             exit 0
           fi
+          
+          # Get all GIF files from media folder
+          gifs=(media/*.gif)
           
           # Select a random GIF using shuf for better randomness
           random_gif=$(printf '%s\n' "${gifs[@]}" | shuf -n 1)
           
           echo "Selected GIF: $random_gif"
           
-          # Update README.md - match both media/xxx.gif and xxx.gif patterns
+          # Update README.md with the selected GIF
           sed -i 's|!\[Random GIF\]([^)]*\.gif)|![Random GIF]('"$random_gif"')|g' README.md
           
           # Check if there are changes
