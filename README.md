@@ -12,6 +12,6 @@ But anyway I have no idea (yet, probably), sometimes I mess around LLM with some
 
 ![Metrics](github-metrics.svg)
 
-![Random GIF](media/721579529e37effcd53f7a3db4259a4e.gif)
+![Random GIF](media/3B737A5C-9D4F-4382-A26F-7DC2A8D62AEB.gif)
 
 <div>
