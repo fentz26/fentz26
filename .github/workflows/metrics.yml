@@ -45,6 +45,17 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          
+          # Check if metrics.svg was generated
+          if [ ! -f "metrics.svg" ]; then
+            echo "Error: metrics.svg was not generated"
+            exit 1
+          fi
+          
           git add metrics.svg
-          git diff --staged --quiet || git commit -m "Update metrics"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update metrics"
+            git push
+          fi
