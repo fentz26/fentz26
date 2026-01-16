@@ -20,7 +20,11 @@ jobs:
         id: update-readme
         run: |
           # Get all GIF files from media folder, excluding disable subfolder
-          gifs=($(find media -maxdepth 1 -name "*.gif" -type f | grep -v "media/disable"))
+          # Use null-delimited input to handle filenames with spaces correctly
+          gifs=()
+          while IFS= read -r -d '' file; do
+            [[ "$file" != *"/disable/"* ]] && gifs+=("$file")
+          done < <(find media -maxdepth 1 -name "*.gif" -type f -print0)
           
           # Check if any GIF files were found
           if [ ${#gifs[@]} -eq 0 ]; then

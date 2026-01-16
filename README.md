@@ -14,7 +14,7 @@ But anyway I have no idea (yet, probably), sometimes I mess around LLM with some
 
 ![Random GIF](media/2A18C04E-9981-44F5-8B51-1D2C912FF679.gif)
 
+![Metrics](metrics.svg)
+
 ##
 </div>
-
-![Metrics](metrics.svg)
