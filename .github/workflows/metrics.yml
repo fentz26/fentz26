@@ -40,7 +40,7 @@ jobs:
           plugin_anilist_sections: ${{ steps.config.outputs.anilist_sections }}
           plugin_anilist_medias: ${{ steps.config.outputs.anilist_medias }}
           base: ""
-          output: github-metrics.svg
+          filename: github-metrics.svg
       
       - name: Commit and push changes
         run: |
