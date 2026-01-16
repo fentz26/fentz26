@@ -17,4 +17,4 @@ But anyway I have no idea (yet, probably), sometimes I mess around LLM with some
 ##
 </div>
 
-Founder/CEO of [MRFY](https://github.com/Polaryon) and [KIIAREN](https://github.com/kiiaren)
+![Metrics](metrics.svg)
