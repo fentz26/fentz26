@@ -18,8 +18,8 @@ Afternoon, sometimes I just watch anime and build full-stack apps
   </tr>
 </table>
 
-![Random GIF](media/040d97852cd9b12a0cce2c67dd9d624b.gif)
-
 ##
+
+![Random GIF](media/040d97852cd9b12a0cce2c67dd9d624b.gif)
 
 <div>
