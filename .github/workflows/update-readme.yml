@@ -19,15 +19,15 @@ jobs:
       - name: Update README with random GIF
         id: update-readme
         run: |
-          # Check if GIF files exist in media folder
-          if ! ls media/*.gif 1> /dev/null 2>&1; then
-            echo "No GIF files found in media folder"
+          # Get all GIF files from media folder, excluding disable subfolder
+          gifs=($(find media -maxdepth 1 -name "*.gif" -type f | grep -v "media/disable"))
+          
+          # Check if any GIF files were found
+          if [ ${#gifs[@]} -eq 0 ]; then
+            echo "No GIF files found in media folder (excluding disable folder)"
             echo "changed=false" >> $GITHUB_OUTPUT
             exit 0
           fi
-          
-          # Get all GIF files from media folder
-          gifs=(media/*.gif)
           
           # Select a random GIF using shuf for better randomness
           random_gif=$(printf '%s\n' "${gifs[@]}" | shuf -n 1)
