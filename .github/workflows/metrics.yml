@@ -23,22 +23,8 @@ jobs:
           user: fentz26
           plugin_anilist: yes
           plugin_anilist_user: fentyz2601
-          plugin_anilist_sections: watching, reading
-          base: header, activity, community, repositories, metadata
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-          plugin_languages: yes
-          plugin_languages_ignored: html, css, scss, less, dockerfile, shell, makefile
-          plugin_languages_limit: 8
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          plugin_lines: yes
-          plugin_habits: yes
-          plugin_stars: yes
-          plugin_stars_limit: 4
-          plugin_repositories: yes
-          plugin_repositories_limit: 8
-          plugin_repositories_featured: fentz26/fentz26
+          plugin_anilist_sections: characters
+          base: ""
           output: metrics.svg
       
       - name: Commit and push changes
