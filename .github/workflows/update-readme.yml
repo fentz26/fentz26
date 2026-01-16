@@ -16,30 +16,55 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
-      - name: Update README with random GIF
+      - name: Update README with GIF
         id: update-readme
         run: |
-          # Get all GIF files from media folder, excluding disable subfolder
-          # Use null-delimited input to handle filenames with spaces correctly
-          gifs=()
-          while IFS= read -r -d '' file; do
-            [[ "$file" != *"/disable/"* ]] && gifs+=("$file")
-          done < <(find media -maxdepth 1 -name "*.gif" -type f -print0)
+          # Read configuration
+          gif_enabled=$(jq -r '.gif.enabled' .github/config.json)
+          gif_random=$(jq -r '.gif.random' .github/config.json)
+          gif_specific=$(jq -r '.gif.specific' .github/config.json)
           
-          # Check if any GIF files were found
-          if [ ${#gifs[@]} -eq 0 ]; then
-            echo "No GIF files found in media folder (excluding disable folder)"
+          # Check if GIF is enabled
+          if [ "$gif_enabled" != "true" ]; then
+            echo "GIF is disabled in config"
             echo "changed=false" >> $GITHUB_OUTPUT
             exit 0
           fi
           
-          # Select a random GIF using shuf for better randomness
-          random_gif=$(printf '%s\n' "${gifs[@]}" | shuf -n 1)
-          
-          echo "Selected GIF: $random_gif"
+          # Determine which GIF to use
+          if [ "$gif_random" = "true" ]; then
+            # Get all GIF files from media folder, excluding disable subfolder
+            # Use null-delimited input to handle filenames with spaces correctly
+            gifs=()
+            while IFS= read -r -d '' file; do
+              [[ "$file" != *"/disable/"* ]] && gifs+=("$file")
+            done < <(find media -maxdepth 1 -name "*.gif" -type f -print0)
+            
+            # Check if any GIF files were found
+            if [ ${#gifs[@]} -eq 0 ]; then
+              echo "No GIF files found in media folder (excluding disable folder)"
+              echo "changed=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+            
+            # Select a random GIF using shuf for better randomness
+            selected_gif=$(printf '%s\n' "${gifs[@]}" | shuf -n 1)
+            echo "Selected random GIF: $selected_gif"
+          else
+            # Use specific GIF from config
+            selected_gif="$gif_specific"
+            echo "Using specific GIF: $selected_gif"
+            
+            # Verify the specific GIF exists
+            if [ ! -f "$selected_gif" ]; then
+              echo "Error: Specific GIF file not found: $selected_gif"
+              echo "changed=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
           
           # Update README.md with the selected GIF
-          sed -i 's|!\[Random GIF\]([^)]*\.gif)|![Random GIF]('"$random_gif"')|g' README.md
+          sed -i 's|!\[Random GIF\]([^)]*\.gif)|![Random GIF]('"$selected_gif"')|g' README.md
           
           # Check if there are changes
           if git diff --quiet README.md; then

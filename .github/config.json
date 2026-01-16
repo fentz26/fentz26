@@ -1,0 +1,14 @@
+{
+  "gif": {
+    "enabled": true,
+    "random": true,
+    "specific": "media/Eyes.gif"
+  },
+  "anilist": {
+    "enabled": true,
+    "sections": ["characters"]
+  },
+  "metrics": {
+    "enabled": true
+  }
+}

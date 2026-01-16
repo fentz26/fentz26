@@ -16,14 +16,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
+      - name: Read configuration
+        id: config
+        run: |
+          metrics_enabled=$(jq -r '.metrics.enabled' .github/config.json)
+          anilist_enabled=$(jq -r '.anilist.enabled' .github/config.json)
+          anilist_sections=$(jq -r '.anilist.sections | join(",")' .github/config.json)
+          
+          echo "metrics_enabled=$metrics_enabled" >> $GITHUB_OUTPUT
+          echo "anilist_enabled=$anilist_enabled" >> $GITHUB_OUTPUT
+          echo "anilist_sections=$anilist_sections" >> $GITHUB_OUTPUT
+      
       - name: Generate metrics
+        if: steps.config.outputs.metrics_enabled == 'true'
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: fentz26
-          plugin_anilist: yes
+          plugin_anilist: ${{ steps.config.outputs.anilist_enabled == 'true' && 'yes' || 'no' }}
           plugin_anilist_user: fentyz2601
-          plugin_anilist_sections: characters
+          plugin_anilist_sections: ${{ steps.config.outputs.anilist_sections }}
           base: ""
           output: metrics.svg
       
