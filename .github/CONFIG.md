@@ -61,6 +61,8 @@ Edit `.github/config.json` to customize your profile settings.
 
 ### Available sections:
 - `"characters"` - Favorite characters
+- `"anime"` - Favorite anime
+- `"manga"` - Favorite manga
 - `"watching"` - Currently watching anime
 - `"reading"` - Currently reading manga
 - `"staff"` - Favorite staff members
@@ -75,11 +77,19 @@ Edit `.github/config.json` to customize your profile settings.
 }
 ```
 
+**Favorite characters and anime:**
+```json
+"anilist": {
+  "enabled": true,
+  "sections": ["characters", "anime"]
+}
+```
+
 **Multiple sections:**
 ```json
 "anilist": {
   "enabled": true,
-  "sections": ["characters", "watching", "reading"]
+  "sections": ["characters", "anime", "watching", "reading"]
 }
 ```
 

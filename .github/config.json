@@ -6,7 +6,7 @@
   },
   "anilist": {
     "enabled": true,
-    "sections": ["characters"]
+    "sections": ["characters", "anime"]
   },
   "metrics": {
     "enabled": true
