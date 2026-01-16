@@ -1,8 +1,8 @@
 {
   "gif": {
     "enabled": true,
-    "random": true,
-    "specific": "media/Eyes.gif"
+    "random": false,
+    "specific": "media/040d97852cd9b12a0cce2c67dd9d624b.gif"
   },
   "anilist": {
     "enabled": true,
