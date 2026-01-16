@@ -37,20 +37,20 @@ jobs:
           plugin_anilist_user: fentyz2601
           plugin_anilist_sections: ${{ steps.config.outputs.anilist_sections }}
           base: ""
-          output: metrics.svg
+          output: github-metrics.svg
       
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Check if metrics.svg was generated
-          if [ ! -f "metrics.svg" ]; then
-            echo "Error: metrics.svg was not generated"
+          # Check if github-metrics.svg was generated
+          if [ ! -f "github-metrics.svg" ]; then
+            echo "Error: github-metrics.svg was not generated"
             exit 1
           fi
           
-          git add metrics.svg
+          git add github-metrics.svg
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
