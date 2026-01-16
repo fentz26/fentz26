@@ -6,7 +6,7 @@ Mark Zuckerberg said it, but why do I have to believe it when I am trying to tak
 
 But anyway I have no idea (yet, probably), sometimes I mess around LLM with some A100 SMX5/H100 SMX5/B200, or sometimes I just watch anime and build full-stack apps
 
-##
+
 
 [![Discord](https://dcbadge.limes.pink/api/shield/463894270810783755)](https://discord.com/users/463894270810783755) [![osu!](https://img.shields.io/badge/fentyz2601-Offline-808080?style=for-the-badge&logo=osu&logoColor=white&labelColor=FF66AA)](https://osu.ppy.sh/users/17599205)
 
@@ -16,4 +16,4 @@ But anyway I have no idea (yet, probably), sometimes I mess around LLM with some
 
 ![Random GIF](media/721579529e37effcd53f7a3db4259a4e.gif)
 
-##
+<div>
