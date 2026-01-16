@@ -1,6 +1,6 @@
 <div align="center">
 
->**"Ideas don’t come out fully formed , they only become clearer as you work on them . You just have to get started."**
+**"Ideas don’t come out fully formed , they only become clearer as you work on them . You just have to get started."**
 
 Mark Zuckerberg said it, but why do I have to believe it when I am trying to take what from future to the present.
 
