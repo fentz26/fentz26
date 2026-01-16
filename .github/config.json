@@ -1,13 +1,18 @@
 {
   "gif": {
-    "enabled": true,
+    "enabled": false,
     "random": false,
     "specific": "media/040d97852cd9b12a0cce2c67dd9d624b.gif"
   },
   "anilist": {
     "enabled": true,
-    "sections": ["characters", "favorites"],
-    "medias": ["anime"]
+    "sections": [
+      "characters",
+      "favorites"
+    ],
+    "medias": [
+      "anime"
+    ]
   },
   "metrics": {
     "enabled": true
