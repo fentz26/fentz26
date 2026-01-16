@@ -12,7 +12,7 @@ But anyway I have no idea (yet, probably), sometimes I mess around LLM with some
 
 [![MyAnimeList](https://img.shields.io/badge/fentyz2601-WATCHING-808080?style=for-the-badge&logo=myanimelist&logoColor=white&labelColor=2E51A2)](https://myanimelist.net/profile/fentyz2601) [![SoundCloud](https://img.shields.io/badge/Fentz-Like%20list-808080?style=for-the-badge&logo=soundcloud&logoColor=white&labelColor=FF5500)](https://soundcloud.com/fentyz/likes)
 
-![Random GIF](media/Eyes.gif)
+![Random GIF](media/3B737A5C-9D4F-4382-A26F-7DC2A8D62AEB.gif)
 
 ##
 </div>
