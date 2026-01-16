@@ -11,6 +11,8 @@ Afternoon, sometimes I just watch anime and build full-stack apps
 
 ![Metrics](github-metrics.svg)
 
+[![osu! Stats](https://osu-embed.b68dev.xyz/pp_acc?username=fentyz2601)](https://osu.ppy.sh/users/17599205)
+
 ![Random GIF](media/040d97852cd9b12a0cce2c67dd9d624b.gif)
 
 <div>
