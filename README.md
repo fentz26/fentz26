@@ -14,7 +14,7 @@ But anyway I have no idea (yet, probably), sometimes I mess around LLM with some
 
 ![Random GIF](media/eae57a4d4eab40ad5b6ec338b6d58e39.gif)
 
-![Metrics](metrics.svg)
+![Metrics](github-metrics.svg)
 
 ##
 </div>
