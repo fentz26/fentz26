@@ -6,7 +6,8 @@
   },
   "anilist": {
     "enabled": true,
-    "sections": ["characters", "anime"]
+    "sections": ["characters", "favorites"],
+    "medias": ["anime"]
   },
   "metrics": {
     "enabled": true

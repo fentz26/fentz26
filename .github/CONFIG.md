@@ -55,17 +55,20 @@ Edit `.github/config.json` to customize your profile settings.
 ```json
 "anilist": {
   "enabled": true,                    // Enable/disable AniList plugin
-  "sections": ["characters"]          // AniList sections to display
+  "sections": ["characters", "favorites"],  // AniList sections to display
+  "medias": ["anime"]                 // Media types for favorites (anime, manga)
 }
 ```
 
 ### Available sections:
 - `"characters"` - Favorite characters
-- `"anime"` - Favorite anime
-- `"manga"` - Favorite manga
+- `"favorites"` - Favorite anime/manga (based on medias setting)
 - `"watching"` - Currently watching anime
 - `"reading"` - Currently reading manga
-- `"staff"` - Favorite staff members
+
+### Media types (for favorites section):
+- `"anime"` - Show favorite anime
+- `"manga"` - Show favorite manga
 
 ### Examples:
 
@@ -77,11 +80,21 @@ Edit `.github/config.json` to customize your profile settings.
 }
 ```
 
-**Favorite characters and anime:**
+**Favorite characters and favorite anime:**
 ```json
 "anilist": {
   "enabled": true,
-  "sections": ["characters", "anime"]
+  "sections": ["characters", "favorites"],
+  "medias": ["anime"]
+}
+```
+
+**Favorite characters and favorite manga:**
+```json
+"anilist": {
+  "enabled": true,
+  "sections": ["characters", "favorites"],
+  "medias": ["manga"]
 }
 ```
 
@@ -89,7 +102,8 @@ Edit `.github/config.json` to customize your profile settings.
 ```json
 "anilist": {
   "enabled": true,
-  "sections": ["characters", "anime", "watching", "reading"]
+  "sections": ["characters", "favorites", "watching", "reading"],
+  "medias": ["anime", "manga"]
 }
 ```
 

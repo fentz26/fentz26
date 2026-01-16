@@ -22,10 +22,12 @@ jobs:
           metrics_enabled=$(jq -r '.metrics.enabled' .github/config.json)
           anilist_enabled=$(jq -r '.anilist.enabled' .github/config.json)
           anilist_sections=$(jq -r '.anilist.sections | join(",")' .github/config.json)
+          anilist_medias=$(jq -r '.anilist.medias // ["anime", "manga"] | join(",")' .github/config.json)
           
           echo "metrics_enabled=$metrics_enabled" >> $GITHUB_OUTPUT
           echo "anilist_enabled=$anilist_enabled" >> $GITHUB_OUTPUT
           echo "anilist_sections=$anilist_sections" >> $GITHUB_OUTPUT
+          echo "anilist_medias=$anilist_medias" >> $GITHUB_OUTPUT
       
       - name: Generate metrics
         if: steps.config.outputs.metrics_enabled == 'true'
@@ -36,6 +38,7 @@ jobs:
           plugin_anilist: ${{ steps.config.outputs.anilist_enabled == 'true' && 'yes' || 'no' }}
           plugin_anilist_user: fentyz2601
           plugin_anilist_sections: ${{ steps.config.outputs.anilist_sections }}
+          plugin_anilist_medias: ${{ steps.config.outputs.anilist_medias }}
           base: ""
           output: github-metrics.svg
       
