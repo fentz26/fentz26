@@ -15,10 +15,10 @@ Afternoon, sometimes I just watch anime and build full-stack apps
 <table>
   <tr>
     <td><img src="github-metrics.svg" alt="Metrics" /></td>
-    <td><a href="https://osu.ppy.sh/users/17599205"><img src="https://osu-sig.vercel.app/card?user=fentyz2601&mode=std&lang=en&animation=true" alt="osu! Stats" /></a></td>
+    <td><a href="https://osu.ppy.sh/users/17599205"><img src="https://osu-profile-stats.vercel.app/api/profile-stats/fentyz2601?playmode=osu&version=full" alt="osu! Stats" /></a></td>
   </tr>
 </table>
 
 ##
 
-<div>
+<div class="contra-hire-me-button" data-analyticsUserId="f3195e9f-b068-46df-9612-8a312814a634" data-theme="dark" data-username="fentz_zzz_ajhk7a5i"></div><script async src="https://contra.com/static/embed/sdk.js" charset="utf-8"></script>
