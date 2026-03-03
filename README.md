@@ -20,5 +20,3 @@ Afternoon, sometimes I just watch anime and build full-stack apps
 </table>
 
 ##
-
-<div class="contra-hire-me-button" data-analyticsUserId="f3195e9f-b068-46df-9612-8a312814a634" data-theme="dark" data-username="fentz_zzz_ajhk7a5i"></div><script async src="https://contra.com/static/embed/sdk.js" charset="utf-8"></script>
