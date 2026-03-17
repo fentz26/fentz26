@@ -4,7 +4,7 @@
 
 Mark Zuckerberg said it, but why do I have to believe it, I would do my own ways.
 
-No clue, sometimes I mess around LLM with A100 SMX/H100 SMX/B200 SMX
+No clue, sometimes I mess around LLM with A100 SMX/H100 H200 SMX/B200 SMX Cluster
 
 Afternoon, sometimes I just watch anime and build full-stack apps
 
