@@ -1,0 +1,14 @@
+# Vibe coding stuff
+CLAUDE.md
+
+# Claude Code local config
+/.claude/
+
+# Variables
+.env
+.env.local
+.env.example
+*.local
+
+# sample files
+README_SAMPLE.md
