@@ -2,4 +2,7 @@
 
 *AI model not random AI wrapping startup.
 
-![profile views](https://shieldcn.dev/views/user/fentz26.svg?variant=branded)
+<p align="center">
+  <img src="https://shieldcn.dev/views/user/fentz26.svg?variant=branded" alt="profile views" />
+</p>
+
